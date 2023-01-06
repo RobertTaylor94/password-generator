@@ -101,10 +101,12 @@ var specialCharacters = [
         length = prompt("How long should your password be? (Between 10 and 64 characters)")
     } while ((isNaN(length)) || (length < 10) || (length > 64))
 
-    var lowerCase = confirm("Should the password contain lowercase characters?")
-    var upperCase = confirm("Should the password contain uppercase characters?")
-    var specialChar = confirm("Should the password contain special characters?")
-    var numberChar = confirm("Should the password contain numbers?")
+    do {
+        var lowerCase = confirm("Should the password contain lowercase characters?")
+        var upperCase = confirm("Should the password contain uppercase characters?")
+        var specialChar = confirm("Should the password contain special characters?")
+        var numberChar = confirm("Should the password contain numbers?")
+    } while ( (lowerCase === false) && (upperCase === false) && (specialChar === false) && (numberChar === false)  )
 
     console.log(length, lowerCase, upperCase, specialChar, numberChar)
   }
@@ -113,12 +115,12 @@ var specialCharacters = [
   function getRandom(arr) {
     var randomIndex = Math.floor(Math.random() * arr.length)
     var element = arr[randomIndex]
-    console.log(element)
+    return element
   }
   
   // Function to generate password with user input
   function generatePassword() {
-
+  
   }
   
   // Get references to the #generate element
