@@ -132,8 +132,8 @@
 
     // add one random character to the password for the requested length
     for (i = 0; i < passwordOption.length; i++) {
-        randomArray = getRandom(selectedOptions)
-        password += getRandom(characters[`${randomArray}`])
+        randomArray = getRandom(selectedOptions) // selects a random array from the user selected options
+        password += getRandom(characters[`${randomArray}`]) // gets a random character from the array named randomArray
     }
     return password
   }
