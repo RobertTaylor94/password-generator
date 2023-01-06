@@ -7,7 +7,7 @@ Using Do, While blocks I made sure the user input a password length between 10 a
 <img src="./assets/code_screenshot_two.png" height="1100" width="300">
 
 The generate password function used the names of the character sets stored in the selectedOptions array to grab one random element at a time from one of those arrays and adds it to the passsword until the users desired length is reach. It then pushes the password to be displayed on the site.
-<img src="./assets/code_screenshot.png" height="1200" width="500">
+<img src="./assets/code_screenshot.png" width="1200" height="500">
 
 ## Deployed Site
 
