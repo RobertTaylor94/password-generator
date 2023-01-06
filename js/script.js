@@ -89,10 +89,13 @@ var specialCharacters = [
   ];
 
   var length = ""
-  var lowerCase = false
-  var upperCase = false
-  var specialChar = false
-  var numberChar = false
+  
+  var passwordOption = {
+    lowerCase: false,
+    upperCase: false,
+    specialChar: false,
+    numberChar: false
+  }
   
   // Function to prompt user for password options
   function getPasswordOptions() {
@@ -102,13 +105,13 @@ var specialCharacters = [
     } while ((isNaN(length)) || (length < 10) || (length > 64))
 
     do {
-        var lowerCase = confirm("Should the password contain lowercase characters?")
-        var upperCase = confirm("Should the password contain uppercase characters?")
-        var specialChar = confirm("Should the password contain special characters?")
-        var numberChar = confirm("Should the password contain numbers?")
-    } while ( (lowerCase === false) && (upperCase === false) && (specialChar === false) && (numberChar === false)  )
+        passwordOption.lowerCase = confirm("Should the password contain lowercase characters?")
+        passwordOption.upperCase = confirm("Should the password contain uppercase characters?")
+        passwordOption.specialChar = confirm("Should the password contain special characters?")
+        passwordOption.numberChar = confirm("Should the password contain numbers?")
+    } while ( (passwordOption.lowerCase === false) && (passwordOption.upperCase === false) && (passwordOption.specialChar === false) && (passwordOption.numberChar === false)  )
 
-    console.log(length, lowerCase, upperCase, specialChar, numberChar)
+
   }
   
   // Function for getting a random element from an array
@@ -120,7 +123,7 @@ var specialCharacters = [
   
   // Function to generate password with user input
   function generatePassword() {
-  
+
   }
   
   // Get references to the #generate element
