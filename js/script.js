@@ -87,15 +87,23 @@ var specialCharacters = [
     'Y',
     'Z'
   ];
+
+  var length = ""
+  var lowerCase = false
+  var upperCase = false
+  var specialChar = false
+  var numberChar = false
   
   // Function to prompt user for password options
   function getPasswordOptions() {
-  
+
   }
   
   // Function for getting a random element from an array
   function getRandom(arr) {
-  
+    var randomIndex = Math.floor(Math.random() * arr.length)
+    var element = arr[randomIndex]
+    console.log(element)
   }
   
   // Function to generate password with user input
@@ -108,6 +116,7 @@ var specialCharacters = [
   
   // Write password to the #password input
   function writePassword() {
+
     var password = generatePassword();
     var passwordText = document.querySelector('#password');
   
