@@ -97,6 +97,16 @@ var specialCharacters = [
   // Function to prompt user for password options
   function getPasswordOptions() {
 
+    do { //asks the user how long the password should be until it satisfies the criteria of being a number between 10 and 64
+        length = prompt("How long should your password be? (Between 10 and 64 characters)")
+    } while ((isNaN(length)) || (length < 10) || (length > 64))
+
+    var lowerCase = confirm("Should the password contain lowercase characters?")
+    var upperCase = confirm("Should the password contain uppercase characters?")
+    var specialChar = confirm("Should the password contain special characters?")
+    var numberChar = confirm("Should the password contain numbers?")
+
+    console.log(length, lowerCase, upperCase, specialChar, numberChar)
   }
   
   // Function for getting a random element from an array
@@ -116,7 +126,7 @@ var specialCharacters = [
   
   // Write password to the #password input
   function writePassword() {
-
+    getPasswordOptions()
     var password = generatePassword();
     var passwordText = document.querySelector('#password');
   
